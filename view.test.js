@@ -13,4 +13,12 @@ describe('Page view', () => {
 
     expect(document.querySelectorAll('p').length).toBe(2);
   });
+
+  it('Displays 3 paragraphs.', () => {
+    document.body.innerHTML = fs.readFileSync('./index.html');
+
+    const view = new View();
+    view.addParagraph("This is the third paragraph!")
+    expect(document.querySelectorAll('p').length).toBe(3);
+  });
 });
