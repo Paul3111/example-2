@@ -12,6 +12,11 @@ class View {
     const currentDiv = document.getElementById("main-container");
     document.body.insertBefore(newDiv, currentDiv.nextSibling);
   }
+
+  clearParagraphs() {
+    const elementToBeRemoved = document.querySelectorAll("p");
+    elementToBeRemoved.forEach (element => element.remove());
+    }
 }
 
 module.exports = View;
